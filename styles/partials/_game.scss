@@ -1,0 +1,146 @@
+.game-play-screen {
+  padding-bottom: 30px;
+  margin-top: 50px;
+  @include flex(column, nowrap, center, center);
+  @include media(325px) {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+  .game-field {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5rem;
+    min-height: 350px;
+    @include flex(column, nowrap, center, center);
+  }
+  min-height: 50vh;
+  .user-guesses {
+    @include position(absolute, 20px, null, null, 20px);
+    @include flex (column, wrap, flex-start, flex-start);
+    max-height: 320px;
+  }
+  .desktop-guesses {
+    @include media(1030px){
+      display: none;
+    }
+  }
+  text-align: center;
+  .play-timer {
+    @include position(absolute, -30px, -20px, null, null);
+    @include media(850px) {
+      @include position(absolute, -20px, -20px, null, null);
+    }
+    @include media(700px) {
+      @include position(absolute, -30px, -30px, null, null);
+    }
+    @include media(600px) {
+      width: 80px;
+      height: 80px;
+      border-radius: 40px;
+      font-size: 2rem;
+      @include position(absolute, -20px, -20px, null, null);
+    }
+    @include media(400px) {
+      width: 70px;
+      height: 70px;
+      border-radius: 35px;
+    }
+  }
+  p {
+    margin-top: 10px;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+     @include media(400px) {
+      margin-top: 5px;
+    }
+  }
+  p span {
+    font-size: 2rem;
+    color: $correct;
+  }
+  label {
+    color: $darkpurple;
+    display: block;
+    font-family: $font-secondary;
+  }
+  input{
+    border: 0;
+    color: $black;
+    background: $lightblue;
+    padding: 10px;
+    margin-top: 10px;
+    border: 5px solid $lightpurple;
+  }
+  h2 {
+    margin-top: -8rem;
+    font-size: 3rem;
+    padding: 0 10px;
+    margin-bottom: -.5rem;
+    @include box-shadow(12px, 12px, $lightblue);
+    @include media(400px) {
+      font-size: 2.5rem;
+      margin-top: -6rem;
+    }
+  }
+  h3 {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    @include media(650px) {
+      margin-top: 2.5rem;
+    }
+    @include media(400px) {
+      font-size: 2rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.timer {
+  @include flex(row, nowrap, center, center);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: $black;
+  font-size: 2.8rem;
+  color: #FAFAFA;
+}
+
+li {
+  font-size: 1.3rem;
+  @include media(500px) {
+    font-size: 1rem;
+  }
+  color: $watermelon;
+  list-style: none;
+  text-align-last: left;
+  margin-right: 10px;
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    display: inline-block;
+    margin-right: .4rem;
+    font-weight: 900;
+  }
+  &.correct {
+    color: $correct;
+    &:before {
+      content: "\f00c";
+    }
+  }
+  &.wrong {
+    &:before {
+      content: "\f00d";
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}

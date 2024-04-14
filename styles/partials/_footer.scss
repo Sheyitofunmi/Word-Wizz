@@ -1,0 +1,27 @@
+footer {
+    text-align: center;
+    @include flex (row, nowrap, center, center);
+    background-color: $lightblue;
+    min-height: 44px;
+    width: 100%;
+    font-size: .8rem;
+    @include position(absolute, null, 0, 0, 0);
+    padding: 10px;
+    p {
+        line-height: 2;
+        padding: 0 1rem;
+    }
+    a {
+        text-decoration: none;
+        padding: 0 5px;
+        color: $black;
+        background-color: $lightpurple; 
+        transition: background-color 0.3s; 
+        &:hover {
+            background-color: $watermelon;
+        }
+    }
+    
+}
+
+

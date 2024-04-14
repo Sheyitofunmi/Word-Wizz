@@ -1,0 +1,120 @@
+.intro-screen {
+  p,
+  li {
+    font-family: $font-primary;
+  }
+  @include flex(column, nowrap, center, center);
+  margin: 100px auto;
+  padding: 0 30px 40px;
+  @include media(550px) {
+    margin-bottom: 120px;
+  }
+  @include media(500px) {
+    padding: 0 15px 40px;
+    margin-right: 10px;
+  }
+  p {
+    margin-left: 20px;
+    @include media(500px) {
+      margin-left: 10px;
+    }
+    &:first-of-type {
+      margin-bottom: 10px;
+    } 
+    @include media(400px) {
+      font-size: 0.9rem;
+    }
+  }
+  .how-to-container {
+    @include flex(row, nowrap, flex-start, center);
+    @include media(851px) {
+      @include flex(column, nowrap, flex-start, flex-start);
+    }
+    .how-to-txt {
+      width: 70%;
+      @include media(851px) {
+        width: 100%;
+        order: 2;
+      }
+    }
+    .how-to-img {
+      width: 58%;
+      margin-right: -2rem;
+      @include media(1100px) {
+        width: 70%;
+        margin-right: -5rem;
+      }
+       @include media(989px) {
+        width: 90%;
+      }
+      @include media(851px) {
+        order: 1;
+        width: 100%;
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: -4.2rem;
+    margin-bottom: -.5rem;
+    background-color: $lightpurple;
+    padding: 0 5%;
+    @include box-shadow(12px, 12px, $lightblue);
+    @include text-shadow(5px, 3px, $darkpurple);
+    @include media(1350px) {
+      margin-bottom: 1rem;
+    }
+     @include media(1150px) {
+      margin-bottom: 2rem;
+    }
+    @include media(850px) {
+      font-size: 5rem;
+      padding: 0 1rem;
+    }
+    @include media(706px) {
+      line-height: 1;
+      padding: 1rem;
+    }
+  }
+  h2 {
+    font-size: 1.5rem;
+    padding: 2px 25px 2px 35px;
+    margin: 20px 0 12px -40px;
+    display: inline-block;
+  }
+  ol {
+    margin-top: 0;
+    @include media(500px) {
+      padding-left: 30px;
+    }
+    li {
+      list-style: decimal;
+      color: $black;
+      font-size: 1rem;
+      @include media(400px) {
+        font-size: 0.9rem;
+        margin: 5px 0;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  button {
+    margin-top: -.5rem;
+    margin-bottom: -4.2rem;
+    @include media(1400px) {
+      margin-top: 1rem;
+    }
+     @include media(1150px) {
+      margin-top: 2rem;
+      margin-bottom: -3.5rem;
+    }
+    @include media(568px) {
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+html {
+    font-size: 125%;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: $font-primary;
+    color: $black;
+    @include flex(column, nowrap, center, center);
+    overflow-x: hidden;
+    background-image: url(./../assets/bg-pattern.png);
+}
+
+.flex-center {
+    @include flex(column, nowrap, center, center);
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    @include media(500px) {
+        width: 93%;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+}
+
+.btn, 
+input {
+    &:focus,
+    &:active {
+        box-shadow: 3px -3px 15px $lightpurple, -3px 3px 15px $lightpurple;
+    }   
+}
+
+p,
+ol {
+    letter-spacing: .01rem;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+button {
+    font-family: $font-secondary;
+}
+
+h1,
+button,
+h2 {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+h2 {
+    font-weight: 400;
+    background-color: $watermelon;
+}
+
+button {
+    border: 10px solid $lightblue;
+    padding: 10px 30px;
+    background: $watermelon;
+    color: #fafafa;
+    min-width: 200px;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    &:hover {
+        border: 10px solid $lightpurple;
+    }
+    max-width: 90%;
+}   
+
+.intro-screen,
+.game-field,
+.round-result-screen,
+.final-result-screen {
+  background-color: #fff;
+  @include box-shadow (12px, 12px, $lightblue);
+}
